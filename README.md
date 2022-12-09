@@ -19,6 +19,9 @@ Thus, in this work, we propose a novel framework that tackles the task of gaze p
 
 ## Progress
 
-1. Dataset Construction
-2. Proposed framework:
-3. 
+[ ] Dataloader for gazefollow
+[ ] Dataloader for our dataset
+[ ] Feature extractors: (head feature extractor: ResNet34, scene feature extractor: ResNet50)
+[ ] Basic GazeFollow Model (Finetune on GazeFollow)
+[ ] Refractor to our dataset
+[ ] Train on our dataset
