@@ -1,6 +1,11 @@
 import torch
 import numpy as np
 
+def to_numpy_img(tensor):
+    np_arr = to_numpy(tensor)
+    img = np.transpose(np_arr, (1,2,0))
+    return img
+    
 def to_numpy(tensor):
     if torch.is_tensor(tensor):
         return tensor.cpu().numpy()

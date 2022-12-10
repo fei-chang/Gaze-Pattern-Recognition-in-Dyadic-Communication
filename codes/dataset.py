@@ -177,7 +177,7 @@ class GazeFollow(Dataset):
         if self.test:
             return img, head_img, gaze_heatmap, cont_gaze, imsize, path
         else:
-            return img, head_img, gaze_heatmap, path, gaze_inside
+            return img, head_img, gaze_heatmap, path
 
     def __len__(self):
         return self.length
