@@ -19,12 +19,7 @@ Thus, in this work, we propose a novel framework that tackles the task of gaze p
 
 ## Progress
 
-
-- [x] Dataloader for gazefollow 
-- [x] Feature extractors: (head feature extractor: ResNet34, scene feature extractor: ResNet50)
-- [x] Basic GazeFollow Model (Finetune on GazeFollow)
-
-**Note by 12/11**
+### :white_check_mark: Basic GazeFollow Model (Pretrain on GazeFollow)
 - Comparison on gazefollow dataset
 
 | Method                     | AUC   | Avg Dist | Min Dist |
@@ -38,13 +33,16 @@ Some parameters:
 2. randoms seed = 2022
 3. initial learning rate = 2.5*e-4
 
-- Refractor the simple extractor to the general gaze pattern recognition tasks:
+### 🕐 Refractor the GazeFollow model to the general Gaze Pattern Recognition Tasks
+- Is it a good idea to just use the predicted heatmap of gaze? 
+- Where does the model learn about the information on gaze? Is it from the feature extractor? or the last 3 conditional alyers?
+- Datasets to be done
 - [ ] AVA-LEAO. 
 - [ ] UCO-LEAO 
 - [ ] OIMG 
 - [ ] ShareAttention
 
-- Experiments on our dataset
+### 🕐 Training and Performance on our dataset
 - [ ] Dataloader for our dataset
 - [ ] Refractor to our dataset
 - [ ] Train on our dataset
