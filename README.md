@@ -29,17 +29,22 @@ Thus, in this work, we propose a novel framework that tackles the task of gaze p
 
 | Method                     | AUC   | Avg Dist | Min Dist |
 |----------------------------|-------|----------|----------|
-| **Ours**                   | **0.845** | **0.219**    | **0.150**    |
+| **Ours**                   | **0.861** | **0.210**    | **0.142**    |
 | SOTA(CVPR 2021 with Depth) | 0.922 | 0.124    | 0.067    |
 | Chong(CVPR 2020 Chong)     | 0.860 | 0.137    | 0.077    |
 
 Some parameters:
-1. Best performance epoch: 15
+1. Best performance epoch: 25
 2. randoms seed = 2022
 3. initial learning rate = 2.5*e-4
 
-- [ ] More completed structure: 1. specify head position? 2. instead of concat, better way to merge two features?
-- [ ] Refractor the simple extractor to the general gaze pattern recognition tasks? 1. AVA-LEAO. 2. UCO-LEAO 3. OIMG 4. ShareAttention
+- Refractor the simple extractor to the general gaze pattern recognition tasks:
+- [ ] AVA-LEAO. 
+- [ ] UCO-LEAO 
+- [ ] OIMG 
+- [ ] ShareAttention
+
+- Experiments on our dataset
 - [ ] Dataloader for our dataset
 - [ ] Refractor to our dataset
 - [ ] Train on our dataset
