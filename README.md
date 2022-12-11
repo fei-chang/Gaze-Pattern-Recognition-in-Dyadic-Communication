@@ -19,9 +19,27 @@ Thus, in this work, we propose a novel framework that tackles the task of gaze p
 
 ## Progress
 
-- [ ] Dataloader for gazefollow
+
+- [x] Dataloader for gazefollow 
+- [x] Feature extractors: (head feature extractor: ResNet34, scene feature extractor: ResNet50)
+- [x] Basic GazeFollow Model (Finetune on GazeFollow)
+
+**Note by 12/11**
+- Comparison on gazefollow dataset
+
+| Method                     | AUC   | Avg Dist | Min Dist |
+|----------------------------|-------|----------|----------|
+| **Ours**                   | **0.845** | **0.219**    | **0.150**    |
+| SOTA(CVPR 2021 with Depth) | 0.922 | 0.124    | 0.067    |
+| Chong(CVPR 2020 Chong)     | 0.860 | 0.137    | 0.077    |
+
+Some parameters:
+1. Best performance epoch: 15
+2. randoms seed = 2022
+3. initial learning rate = 2.5*e-4
+
+- [ ] More completed structure: 1. specify head position? 2. instead of concat, better way to merge two features?
+- [ ] Refractor the simple extractor to the general gaze pattern recognition tasks? 1. AVA-LEAO. 2. UCO-LEAO 3. OIMG 4. ShareAttention
 - [ ] Dataloader for our dataset
-- [ ] Feature extractors: (head feature extractor: ResNet34, scene feature extractor: ResNet50)
-- [ ] Basic GazeFollow Model (Finetune on GazeFollow)
 - [ ] Refractor to our dataset
 - [ ] Train on our dataset
