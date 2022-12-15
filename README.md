@@ -26,7 +26,7 @@ Thus, in this work, we propose a novel framework that tackles the task of gaze p
 |----------------------------|-------|----------|----------|
 | **Ours**                   | **0.861** | **0.210**    | **0.142**    |
 | SOTA(CVPR 2021 with Depth) | 0.922 | 0.124    | 0.067    |
-| Chong(CVPR 2020 Chong)     | 0.860 | 0.137    | 0.077    |
+| Chong(CVPR 2020 Chong)     | 0.921 | 0.137    | 0.077    |
 
 Some parameters:
 1. Best performance epoch: 25
