@@ -13,9 +13,14 @@ Thus, in this work, we propose a novel framework that tackles the task of gaze p
 
 ## Proposed Contribution
 
+
 1. We propose a novel **what the method looks like?** framework for **recognizing gaze patterns with psychological implications during interpersonal communication**.
 2. We introduce a new dataset **dataset information** 
 3. 
+
+##  possible rebuttals: 
+1. What is the difference between this dataset with the GazeCommunication one in Fang's paper 2016? We should elaberate this in 
+2. Why is estimating two vectors possible and good?
 
 ## Progress
 
@@ -34,13 +39,17 @@ Some parameters:
 3. initial learning rate = 2.5*e-4
 
 ### 🕐 Refractor the GazeFollow model to the general Gaze Pattern Recognition Tasks
-- Is it a good idea to just use the predicted heatmap of gaze? 
-- Where does the model learn about the information on gaze? Is it from the feature extractor? or the last 3 conditional alyers?
-- Datasets to be done
-- [ ] AVA-LEAO. 
-- [ ] UCO-LEAO 
-- [ ] OIMG 
-- [ ] ShareAttention
+- Experiments to be done: 
+:white_large_square: AVA-LEAO
+:white_check_mark:  UCO-LEAO 
+:white_large_square:  OIMG 
+:white_large_square: ShareAttention
+
+| Method                     | AUC   | Avg Dist | Min Dist |
+|----------------------------|-------|----------|----------|
+| **Ours**                   | **0.861** | **0.210**    | **0.142**    |
+| SOTA(CVPR 2021 with Depth) | 0.922 | 0.124    | 0.067    |
+| Chong(CVPR 2020 Chong)     | 0.921 | 0.137    | 0.077    |
 
 ### 🕐 Training and Performance on our dataset
 - [ ] Dataloader for our dataset
