@@ -39,17 +39,15 @@ Some parameters:
 3. initial learning rate = 2.5*e-4
 
 ### 🕐 Refractor the GazeFollow model to the general Gaze Pattern Recognition Tasks
-- Experiments to be done: 
-:white_large_square: AVA-LEAO
-:white_check_mark:  UCO-LEAO 
-:white_large_square:  OIMG 
-:white_large_square: ShareAttention
 
-| Method                     | AUC   | Avg Dist | Min Dist |
-|----------------------------|-------|----------|----------|
-| **Ours**                   | **0.861** | **0.210**    | **0.142**    |
-| SOTA(CVPR 2021 with Depth) | 0.922 | 0.124    | 0.067    |
-| Chong(CVPR 2020 Chong)     | 0.921 | 0.137    | 0.077    |
+
+| Dataset                                                          | UCO-LAEO | AVA-LAEO              | OI-MG                 | Shared Attention      |
+|------------------------------------------------------------------|----------|-----------------------|-----------------------|-----------------------|
+| Ours                                                             | 78.09    | :white_medium_square: | :white_medium_square: | :white_medium_square: |
+| LAEONet reported                                                 | **79.5** | 50.6                  | -                     | -                     |
+| LAEONet Sinlge Frame (reported in *4)                            | 55.9     | 70.2                  | 59.8                  | -                     |
+| Pseudo3DGaze                                                     | 65.1     | **72.2**              | **70.1**              | -                     |
+| Gaze+RP+LSTM (Inferring Shared Attention in Social Scene Videos) | -        | -                     | -                     | **71.4**              |
 
 ### 🕐 Training and Performance on our dataset
 - [ ] Dataloader for our dataset
