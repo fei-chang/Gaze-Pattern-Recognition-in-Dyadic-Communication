@@ -1,7 +1,8 @@
 # GazeCommunication
 
 ETRA work (under Construction)
-- Overleaf link [ETRA 2023 paper under construction](https://www.overleaf.com/8542516856cjphkgqhqzvt)
+
+:clock1: Overleaf link [ETRA 2023 paper under construction](https://www.overleaf.com/8542516856cjphkgqhqzvt)
 
 ## Intuition
 
@@ -13,43 +14,25 @@ Thus, in this work, we propose a novel framework that tackles the task of gaze p
 
 ## Proposed Contribution
 
+1. We propose a new taxonomy of static gaze patterns. It comprehensively describes the possible stationary gaze status of an individual in interpersonal communications. Under this taxonomy, we derive the task of classifying static gaze patterns in third-person view images. 
+2. We build a dataset by annotating 370 videos of diverse social interactions with the proposed static gaze patterns.  
+3. We introduce a two-stage deep learning model using predicted 2D gaze vectors and gaze heatmaps to classify static gaze patterns. We show that the proposed approach outperforms the state-of-the-art approaches on both the mutual gaze detection task and the inferring shared attention task.
 
-1. We propose a novel **what the method looks like?** framework for **recognizing gaze patterns with psychological implications during interpersonal communication**.
-2. We introduce a new dataset **dataset information** 
-3. 
-
-##  possible rebuttals: 
-1. What is the difference between this dataset with the GazeCommunication one in Fang's paper 2016? We should elaberate this in 
-2. Why is estimating two vectors possible and good?
+# Method
+ including the figure
 
 ## Progress
 
-### :white_check_mark: Basic GazeFollow Model (Pretrain on GazeFollow)
-- Comparison on gazefollow dataset
-
-| Method                     | AUC   | Avg Dist | Min Dist |
-|----------------------------|-------|----------|----------|
-| **Ours**                   | **0.861** | **0.210**    | **0.142**    |
-| SOTA(CVPR 2021 with Depth) | 0.922 | 0.124    | 0.067    |
-| Chong(CVPR 2020 Chong)     | 0.921 | 0.137    | 0.077    |
-
-Some parameters:
-1. Best performance epoch: 25
-2. randoms seed = 2022
-3. initial learning rate = 2.5*e-4
-
+### 🕐 Basic GazeFollow Model (Pretrain on GazeFollow)
+### 🕐 Training and Performance on our dataset
 ### 🕐 Refractor the GazeFollow model to the general Gaze Pattern Recognition Tasks
 
 
 | Dataset                                                          | UCO-LAEO | AVA-LAEO              | OI-MG                 | Shared Attention      |
 |------------------------------------------------------------------|----------|-----------------------|-----------------------|-----------------------|
-| Ours                                                             | 78.09    | :white_medium_square: | :white_medium_square: | :white_medium_square: |
+| Ours                                                             |:white_medium_square:   | :white_medium_square: | :white_medium_square: | :white_medium_square: |
 | LAEONet reported                                                 | **79.5** | 50.6                  | -                     | -                     |
 | LAEONet Sinlge Frame (reported in *4)                            | 55.9     | 70.2                  | 59.8                  | -                     |
 | Pseudo3DGaze                                                     | 65.1     | **72.2**              | **70.1**              | -                     |
 | Gaze+RP+LSTM (Inferring Shared Attention in Social Scene Videos) | -        | -                     | -                     | **71.4**              |
 
-### 🕐 Training and Performance on our dataset
-- [ ] Dataloader for our dataset
-- [ ] Refractor to our dataset
-- [ ] Train on our dataset
