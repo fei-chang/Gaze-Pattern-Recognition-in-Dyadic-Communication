@@ -32,7 +32,7 @@ Thus, in this work, we propose a novel framework that tackles the task of gaze p
 
 | Dataset                                                          | UCO-LAEO | AVA-LAEO              | OI-MG                 | Shared Attention      |
 |------------------------------------------------------------------|----------|-----------------------|-----------------------|-----------------------|
-| Ours                                                             |0.7502  | 0.7926| :white_medium_square: | :white_medium_square: |
+| Ours                                                             |**75.02**  | **79.26** | :white_medium_square: | :white_medium_square: |
 | LAEONet reported                                                 | **79.5** | 50.6                  | -                     | -                     |
 | LAEONet Sinlge Frame (reported in *4)                            | 55.9     | 70.2                  | 59.8                  | -                     |
 | Pseudo3DGaze                                                     | 65.1     | **72.2**              | **70.1**              | -                     |
