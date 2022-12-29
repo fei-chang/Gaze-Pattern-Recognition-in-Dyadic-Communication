@@ -34,7 +34,7 @@ Thus, in this work, we propose a novel framework that tackles the task of gaze p
 |------------------------------------------------------------------|----------|-----------------------|-----------------------|-----------------------|
 | Ours                                                             |**75.02**  | **82.52** | **72.1** | :white_medium_square: |
 | LAEONet reported                                                 | **79.5** | 50.6                  | -                     | -                     |
-| LAEONet Sinlge Frame (reported in *4)                            | 55.9     | 70.2                  | 59.8                  | -                     |
-| Pseudo3DGaze                                                     | 65.1     | **72.2**              | **70.1**              | -                     |
+| LAEONet Sinlge Frame (reported in *3)                            | 55.9     | 70.2                  | 59.8                  | -                     |
+| Pseudo3DGaze(2021AAAI)                                        | 65.1     | **72.2**              | **70.1**              | -                     |
 | Gaze+RP+LSTM (Inferring Shared Attention in Social Scene Videos) | -        | -                     | -                     | **71.4**              |
 
