@@ -16,10 +16,10 @@ Thus, in this work, we propose a novel framework that tackles the task of gaze p
 
 1. We propose a new taxonomy of static gaze patterns. It comprehensively describes the possible stationary gaze status of an individual in interpersonal communications. Under this taxonomy, we derive the task of classifying static gaze patterns in third-person view images. 
 2. We build a dataset by annotating 370 videos of diverse social interactions with the proposed static gaze patterns.  
-3. We introduce a two-stage deep learning model using predicted 2D gaze vectors and gaze heatmaps to classify static gaze patterns. We show that the proposed approach outperforms the state-of-the-art approaches on both the mutual gaze detection task and the inferring shared attention task.
+3. 
 
 # Method
- including the figure
+![figure](method.png)
 
 ## Progress
 
