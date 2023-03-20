@@ -1,4 +1,4 @@
-# GazeCommunication
+# Gaze Pattern Recognition in Dyadic Communication
 
 ETRA work (under Construction)
 
@@ -6,17 +6,9 @@ ETRA work (under Construction)
 
 ## Intuition
 
-**Following Gaze and Recognizing Patterns in Interpersonal Communication**
+**Gaze Pattern Recognition in Dyadic Communication**
 
-Analyzing gaze behaviors is crucial to interpret the nature of communication. But current studies of gaze patterns just focus on detecting a single specific pattern such as finding the Looking-At-Each Other pattern or shared attention pattern. It would be nice if we can have a framework to find all these patterns at once. Also, current studies on finding gaze patterns do not make use of the development in gaze estimation and gaze follow. One intuitive thought is that if the model can correctly predicts the spatial coordinates of a gaze point, it won't take much effort to learn and classify gaze patterns. 
-
-Thus, in this work, we propose a novel framework that tackles the task of gaze pattern recognition. We propose a new dataset containing videos of interpersonal interaction scenes with gaze pattern annotations including both people looking at each other and share attention.
-
-## Proposed Contribution
-
-1. We propose a new taxonomy of static gaze patterns. It comprehensively describes the possible stationary gaze status of an individual in interpersonal communications. Under this taxonomy, we derive the task of classifying static gaze patterns in third-person view images. 
-2. We build a dataset by annotating 370 videos of diverse social interactions with the proposed static gaze patterns.  
-3. 
+Analyzing gaze behaviors is crucial to interpret the nature of communication. Current studies on gaze have focused primarily on the detection of a single pattern, such as the Looking-At-Each-Other pattern or the shared attention pattern. In this work, we re-define five static gaze patterns that cover all the status during a dyadic communication and propose an end-to-end network to recognize these mutual exclusive gaze patterns given a static image. We annotate a benchmark, namely GP-Static, for the gaze pattern recognition task, on which our model experimentally outperforms other alternate solutions. On other two single gaze pattern tasks, our model also achieves the state-of-art performance. Gaze pattern analysis on preschool children demonstrates that the statistic of the proposed classification of the static gaze patterns conforms with the findings in psychology.
 
 # Method
 ![figure](method.png)
