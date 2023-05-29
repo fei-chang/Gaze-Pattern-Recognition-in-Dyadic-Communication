@@ -1,32 +1,32 @@
 # Gaze Pattern Recognition in Dyadic Communication
 
-ETRA work (under Construction)
+This is the repo for work Gaze Pattern Recognition in Dyadic Communication at ETRA 2023. 
 
-:clock1: Overleaf link [ETRA 2023 paper under construction](https://www.overleaf.com/8542516856cjphkgqhqzvt)
+## Overview
+Analyzing gaze behaviors is crucial to interpret the nature of communication. Current studies on gaze have focused primarily on the detection of a single pattern, such as the Looking-At-Each-Other pattern or the shared attention pattern. In this work, we re-define five static gaze patterns that cover all the status during a dyadic communication and propose a network to recognize these mutual exclusive gaze patterns given an image. We annotate a benchmark, called GP-Static, for the gaze pattern recognition task, on which our method experimentally outperforms other alternate solutions. Our method also achieves the state-of-art performance on other two single gaze pattern recognition tasks. The analysis of gaze patterns on preschool children demonstrates that the statistic of the proposed static gaze patterns conforms with the findings in psychology.
 
-## Intuition
-
-**Gaze Pattern Recognition in Dyadic Communication**
-
-Analyzing gaze behaviors is crucial to interpret the nature of communication. Current studies on gaze have focused primarily on the detection of a single pattern, such as the Looking-At-Each-Other pattern or the shared attention pattern. In this work, we re-define five static gaze patterns that cover all the status during a dyadic communication and propose an end-to-end network to recognize these mutual exclusive gaze patterns given a static image. We annotate a benchmark, namely GP-Static, for the gaze pattern recognition task, on which our model experimentally outperforms other alternate solutions. On other two single gaze pattern tasks, our model also achieves the state-of-art performance. Gaze pattern analysis on preschool children demonstrates that the statistic of the proposed classification of the static gaze patterns conforms with the findings in psychology.
-
-# Method
+## Method Overview
 ![figure](method.png)
 
-## Progress
+## 
+##  🕐 Evaluation on Gaze Pattern Classification [TODO]
+### Dataset[TODO]
+The proposed dataset GP-Static can be downloaded at [link will be updated soon].
 
-### 🕐 Basic GazeFollow Model (Pretrain on GazeFollow)
-### 🕐 Training and Performance on our dataset
+### Implementation [TODO]
+Run: [command wil be updated soon] to obtain the model's performance on the benchmark dataset.
 
 
-### 🕐 Refractor the GazeFollow model to the general Gaze Pattern Recognition Tasks
+##  🕐 Evaluation on Single Gaze Pattern Detection [TODO]
+### Dataset
+To demonstrate the applicability of our method to previously defined tasks of gaze pattern recognition at image level, we evaluate the performance of our model on two single gaze detection tasks: detecting the **mutual** gaze pattern and the **shared attention** pattern.
 
+For the evaluation on detecting mutual gaze (people looking-at-each-other), we use [UCO-LAEO](https://www.robots.ox.ac.uk/~vgg/research/laeonet/main_cvpr2019.html), [AVA-LAEO](https://www.robots.ox.ac.uk/~vgg/research/laeonet/main_cvpr2019.html) and [OI-MG](https://research.google/resources/datasets/google-open-images-mutual-gaze-dataset/).
 
-| Dataset                                                          | UCO-LAEO | AVA-LAEO              | OI-MG                 | Shared Attention      |
-|------------------------------------------------------------------|----------|-----------------------|-----------------------|-----------------------|
-| Ours                                                             |**75.02**  | **82.52** | **72.1** | :white_medium_square: |
-| LAEONet reported                                                 | **79.5** | 50.6                  | -                     | -                     |
-| LAEONet Sinlge Frame (reported in *3)                            | 55.9     | 70.2                  | 59.8                  | -                     |
-| Pseudo3DGaze(2021AAAI)                                        | 65.1     | **72.2**              | **70.1**              | -                     |
-| Gaze+RP+LSTM (Inferring Shared Attention in Social Scene Videos) | -        | -                     | -                     | **71.4**              |
+For the evaluation on detecting the shared attention, we use [VideoCoAtt](http://www.stat.ucla.edu/~lifengfan/shared_attention). 
 
+\* *For downloading these datasets, please refer to the dataset page by clicking on each each dataset*
+
+### Implementation [TODO]
+
+Run: [command wil be updated soon] to obtain the model's performance on the each dataset.
