@@ -9,9 +9,10 @@ Analyzing gaze behaviors is crucial to interpret the nature of communication. Cu
 ![figure](method.png)
 
 ## 
-##  🕐 Evaluation on Gaze Pattern Classification [TODO]
-### Dataset[TODO]
-The proposed dataset GP-Static can be downloaded at [link will be updated soon].
+##  🕐 Evaluation on Gaze Pattern Classification
+### Dataset
+To obtain the dataset, please fill this [form](https://forms.gle/Qhx2M3KGf4WEN2xX8). 
+The videos and annotations will be send to the provided email within 1-2 weeks.
 
 ### Implementation [TODO]
 Run: [command wil be updated soon] to obtain the model's performance on the benchmark dataset.
