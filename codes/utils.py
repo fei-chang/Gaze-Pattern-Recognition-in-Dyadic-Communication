@@ -1,5 +1,7 @@
 import torch
 import numpy as np
+import random
+import os
 
 def to_numpy_img(tensor):
     np_arr = to_numpy(tensor)
@@ -21,6 +23,7 @@ def to_torch(ndarray):
         raise ValueError("Cannot convert {} to torch tensor"
                          .format(type(ndarray)))
     return ndarray
+
 
 def draw_labelmap(img, pt, sigma, type='Gaussian'):
     # Draw a 2D gaussian
@@ -68,3 +71,40 @@ def multi_hot_targets(gaze_pts, out_res):
             y = min(y, h-1)
             target_map[y, x] = 1
     return target_map
+
+def get_center_radius(x_min, y_min, x_max, y_max, img_width, img_height):
+    #returnt the position of head center and head radius in scale 0-1
+    head_x = (x_max+x_min)/(img_width*2)
+    head_y = (y_max+y_min)/(img_height*2)
+    head_center = torch.Tensor([[max(min(head_x, 1), 0), max(min(head_y, 1), 0)]])
+    radius = max(x_max-x_min, y_max-y_min)/(img_width+img_height)
+
+    return head_center, radius
+
+def get_head_embeddings(head_box):
+    """
+    input: head_box: (xmin, ymin, xmax, ymax) of range 0 to 1
+    generate a heatmap of size 32 x 32 where the pixel value equal to 1 
+    if a head is found in that grid and 0 otherwise, and reshape it to a tensor of size 1x1024
+    """
+    xmin, ymin, xmax, ymax = np.array(head_box*32).astype(int)
+    
+    head_embeddings = np.zeros((32, 32))
+    head_embeddings[ymin:ymax, xmin:xmax] = 1
+    head_embeddings = to_torch(head_embeddings).view(1, 1024).type(torch.float)
+    
+    return head_embeddings 
+
+def print_debug(error, info):
+    if error:
+        print("[Error]: %s"%info)
+    else:
+        print("[Info]: %s"%info)
+
+def set_seed(seed: int) -> None:
+    np.random.seed(seed)
+    random.seed(seed)
+    os.environ['PYTHONHASHSEED'] = str(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.backends.cudnn.deterministic = True
